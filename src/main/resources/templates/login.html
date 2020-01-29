@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Login a BetyMarket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estylo.css">
+    <link rel="stylesheet" href="css/manu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/coleccion.css">
+    <link rel="stylesheet" href="css/estilopf.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="./loginjs2.js"></script>
+</head>
+
+<body>
+<script>console.log("Esto es el login")</script>
+    <header>
+        <div class="contenedor">
+            <h1>BetyMarket</h1>
+            
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index">Inicio</a>
+                <a href="preguntasfrecuentes">Preguntas Frecuentes</a>
+                <a href="login">Log in</a>
+                <a href="registro">Registro</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <img src="imagenes/banner.jpg" alt="">
+            <div class="contenedor">
+              
+            </div>
+        </section>
+
+        <div class="contenedor">
+            <form method="POST" class="form-login" onsubmit="return validarLogin()" action="loginSuccessful.php">
+                <div class="form-group">
+                    <h3> LOGIN DE USUARIOS </h3>
+                    <br>
+                <div class="form">  
+                    <div class="etiqueta"><label>Email</label></div>
+                    <div class="etiqueta2"><input class="form-control" type="email" id="mail" placeholder="Email" required></div>
+                    
+                </div>
+                </div>  
+                
+                <br>
+                <div class="form">
+                    <div class="etiqueta"><label>Contraseña</label></div>
+                    <div class="etiqueta2"><input class="form-control" type="password" id="clave" placeholder="Password"  required></div>
+                    <br>
+                    <br>
+                    <span id="spanLogin" ></span>
+                </div>
+
+                <br>
+
+                <div class="form">
+                    <div class="etiqueta">&nbsp;</div>
+                    <div class="etiqueta2">
+                        <button type="submit" id="btnIngresar" name="submit">Ingresar</button></div>
+                        
+                    </div>
+                    <br>
+                </div>
+                
+                <div class="form">
+                    
+                    <br>
+                    <input id="persistent" name="persistent" value="y" type="checkbox" tabindex="3" checked />
+                    <label for="persistent">"Recordarme"</label>
+                    <br>
+                    <br>
+                    <a href="#" id="">¿Olvidó su Contraseña?</a>
+                </div>
+                
+            </form>
+
+        </div>
+
+        <section id="id">
+
+        </section>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <div class="contenedor">
+            <p class="Copy" Betimar>BetyMarket &copy; 2019</p>
+            <div class="sociales">
+                <a href="www.facebook.com"><img src="imagenes/facebook.png" alt="facebook"></a>
+                <img src="imagenes/instagram.png" alt="instagram">
+                <img src="imagenes/twitter.png" alt="twitter">
+                <img src="imagenes/googleplus.png" alt="google+">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
