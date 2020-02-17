@@ -1,4 +1,4 @@
-package com.mic.pruebamic.controllers;
+package com.mic.pruebamic.controller;
 
 /**
  * Controller sirve para retornar HTML 
