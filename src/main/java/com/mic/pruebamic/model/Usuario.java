@@ -2,9 +2,17 @@ package com.mic.pruebamic.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-public abstract class Usuario  {
+public class Usuario  {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	
 	@Column(nullable=false)
 	private String nombre;
     private String apellido;
@@ -13,15 +21,15 @@ public abstract class Usuario  {
     private String password;
     private String email;
     private String numeroDocumento;
-    
     private Carrito unCarrito;
+    private boolean admin;
     
     public Usuario() {
     	
     }
 
 
-    public Usuario( String nombre, String apellido, String password, String email, String numeroDocumento) {
+    public Usuario( String nombre, String apellido, String password, String email, String numeroDocumento, Boolean admin) {
 
         this.nombre = nombre;
         this.apellido = apellido;
@@ -29,6 +37,7 @@ public abstract class Usuario  {
         this.email = email;
         this.numeroDocumento = numeroDocumento;
         this.unCarrito = new Carrito(this);
+        this.admin = admin;
       
     }
 
@@ -85,5 +94,25 @@ public abstract class Usuario  {
 
 	public String getEmail() {
 		return email;
+	}
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
 }
