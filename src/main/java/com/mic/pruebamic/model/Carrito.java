@@ -10,16 +10,16 @@ import javax.persistence.Id;
 
 import com.mic.pruebamic.model.Producto;
 
-@Entity
+// @Entity
 public class Carrito {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	// @Id
+	// @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(nullable=false)
+	// @Column(nullable=false)
 	private Usuario usuario;
 	
-	@Column(nullable=false)
+	// @Column(nullable=false)
 	private List<Producto> productos;
 	public Carrito() {
 		

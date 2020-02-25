@@ -24,7 +24,7 @@ import com.mic.pruebamic.repository.UsuarioJpaRepository;
 	private UsuarioJpaRepository usuarioJpaRepository;
 	
 	
-	@GetMapping("")
+	@GetMapping("all")
 	public List<Usuario>getUsuarios(){
 		List<Usuario>usuarios = usuarioJpaRepository.findAll();
 		return usuarios;
@@ -36,7 +36,7 @@ import com.mic.pruebamic.repository.UsuarioJpaRepository;
 	return unOptionalUsuario.get();
 	}
 	
-	@PostMapping("")
+	@PostMapping("add")
 	public Usuario insertUsuario(Usuario unUsuarioARegistrar) {
 		Usuario unUsuarioRegistrado = usuarioJpaRepository.save(unUsuarioARegistrar);
 				return unUsuarioRegistrado;

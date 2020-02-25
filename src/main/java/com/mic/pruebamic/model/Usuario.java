@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Usuario  {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column(nullable=false)
@@ -21,7 +21,7 @@ public class Usuario  {
     private String password;
     private String email;
     private String numeroDocumento;
-    private Carrito unCarrito;
+  //  private Carrito unCarrito;
     private boolean admin;
     
     public Usuario() {
@@ -36,7 +36,7 @@ public class Usuario  {
         this.password = password;
         this.email = email;
         this.numeroDocumento = numeroDocumento;
-        this.unCarrito = new Carrito(this);
+   //     this.unCarrito = new Carrito(this);
         this.admin = admin;
       
     }
@@ -82,14 +82,14 @@ public class Usuario  {
 	}
 
 
-	public Carrito getUnCarrito() {
-		return unCarrito;
-	}
+//	public Carrito getUnCarrito() {
+//		return unCarrito;
+//	}
 
 
-	public void setUnCarrito(Carrito unCarrito) {
-		this.unCarrito = unCarrito;
-	}
+//	public void setUnCarrito(Carrito unCarrito) {
+//		this.unCarrito = unCarrito;
+//	}
 
 
 	public String getEmail() {
