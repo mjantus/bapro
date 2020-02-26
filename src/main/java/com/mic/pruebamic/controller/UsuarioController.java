@@ -39,7 +39,9 @@ import com.mic.pruebamic.repository.UsuarioJpaRepository;
 	@PostMapping("add")
 	public String insertUsuario(Usuario unUsuarioARegistrar) {
 		Usuario unUsuarioRegistrado = usuarioJpaRepository.save(unUsuarioARegistrar);
+
 				return"redirect:/index";
+		
 	
 	}
 	
