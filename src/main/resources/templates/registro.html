@@ -44,12 +44,11 @@
         </section>
 
         <section id="Registro de Usuario">
-            <h2>REGISTRO DE USUARIOS</h2>
-            <a href="/usuarios/add">Ingrese sus datos</a>
+            
         </section>
         <div class="contenedor">
 
-            <form method="POST" class="form-registro" onsubmit="return validarTodo()" action="validar.php">
+            <form method="POST" class="form-registro" onsubmit="return validarTodo()" action="/usuarios/add">
                 <div>
                     <div class="etiqueta3">
                         <label for="nombre">Nombre:</label>
@@ -62,7 +61,7 @@
 
                 <div>
                     <div class="etiqueta3">
-                        <label for="nombre">Apellido:</label>
+                        <label for="apellido">Apellido:</label>
                     </div>
                     <div class="etiqueta4">
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido"  required><span id="spanApellido"></span>
@@ -74,7 +73,7 @@
                         <label for="email">Email:</label>
                     </div>
                     <div class="etiqueta4">
-                        <input type="email" id="email" name="mail" placeholder="Mail"  required><span id="spanEmail"></span>
+                        <input type="email" id="email" name="email" placeholder="Mail"  required><span id="spanEmail"></span>
                     </div>
                 </div>
 
@@ -83,7 +82,7 @@
                         <label for="direccion">Dirección</label>
                     </div>
                     <div class="etiqueta4">
-                        <input type="text" id="direccion" name="dirección" placeholder="Dirección" required><span id="spanDireccion"></span>
+                        <input type="text" id="direccion" name="direccion" placeholder="Dirección" required><span id="spanDireccion"></span>
                     </div>
                 </div>
                 <div class="etiqueta3">
@@ -116,24 +115,24 @@
                 </div>
 
                 <div>
-                    <div class="etiqueta3"><label for="usuario">Usuario:</label>
+                    <div class="etiqueta3"><label for="user">Usuario:</label>
                     </div>
                     <div class="etiqueta4">
-                        <input type="text" id="usuario" name="usuario" placeholder="Usuario" required><span id="spanUsuario"></span>
+                        <input type="text" id="user" name="user" placeholder="Usuario" required><span id="spanUsuario"></span>
                     </div>
                 </div>
 
                 <div>
                     <div class="etiqueta3">
-                        <label for="clave">Clave:</label></div>
+                        <label for="clave1">Clave:</label></div>
                     <div class="etiqueta4">
-                        <input type="password" id="clave1" name="clave1" placeholder="Clave"  required><span id="spanClave1"></span>
+                        <input type="password" id="clave1" name="password" placeholder="Clave"  required><span id="spanClave1"></span>
                     </div>
                 </div>
 
                 <div>
                     <div class="etiqueta3">
-                        <label for="clave">Confirmar Clave:</label>
+                        <label for="clave2">Confirmar Clave:</label>
                     </div>
                     <div class="etiqueta4">
                         <input type="password" id="clave2" name="clave2" placeholder="Confirmar Clave" required><span id="spanClave2"></span>
