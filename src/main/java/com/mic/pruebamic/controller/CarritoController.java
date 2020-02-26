@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mic.pruebamic.model.Carrito;
-import com.mic.pruebamic.model.Usuario;
 import com.mic.pruebamic.repository.CarritoJpaRepository;
 
 

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Usuario  {
@@ -17,12 +18,14 @@ public class Usuario  {
 	private String nombre;
     private String apellido;
     
-    @Column(nullable=false, unique=true)
+    @Column(nullable=false)
     private String password;
     private String email;
     private String numeroDocumento;
-  //  private Carrito unCarrito;
-    private boolean admin;
+    
+    @OneToOne
+    private Carrito unCarrito;
+    //private boolean admin;
     
     public Usuario() {
     	
@@ -36,8 +39,8 @@ public class Usuario  {
         this.password = password;
         this.email = email;
         this.numeroDocumento = numeroDocumento;
-   //     this.unCarrito = new Carrito(this);
-        this.admin = admin;
+        this.unCarrito = new Carrito(this);
+       // this.admin = admin;
       
     }
 
@@ -82,14 +85,14 @@ public class Usuario  {
 	}
 
 
-//	public Carrito getUnCarrito() {
-//		return unCarrito;
-//	}
+	public Carrito getUnCarrito() {
+		return unCarrito;
+	}
 
 
-//	public void setUnCarrito(Carrito unCarrito) {
-//		this.unCarrito = unCarrito;
-//	}
+	public void setUnCarrito(Carrito unCarrito) {
+		this.unCarrito = unCarrito;
+	}
 
 
 	public String getEmail() {
@@ -105,7 +108,7 @@ public class Usuario  {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+/*
 
 	public boolean isAdmin() {
 		return admin;
@@ -114,5 +117,5 @@ public class Usuario  {
 
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
-	}
+	}*/
 }

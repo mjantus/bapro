@@ -7,20 +7,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
 import com.mic.pruebamic.model.Producto;
 
-// @Entity
+@Entity
 public class Carrito {
-	// @Id
-	// @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	// @Column(nullable=false)
+	@OneToOne
+	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
 	
-	// @Column(nullable=false)
+	@ManyToMany()
+	@JoinTable(name = "carrito_productos")
 	private List<Producto> productos;
+	
+	
 	public Carrito() {
 		
 	}
@@ -36,7 +44,7 @@ public class Carrito {
 
 	public Integer getTotalProductos(){
       return productos.size();
-  }
+	}
 	
 	public Integer getId() {
 		return id;
@@ -45,13 +53,7 @@ public class Carrito {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Double getTotalPrecio(){
-	      Double contador = 0.0;
-	      for (Producto producto : productos) {
-	          contador += producto.getPrecio();
-	      }
 
-	      return contador;
 
-}
+
 }
