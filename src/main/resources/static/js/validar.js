@@ -33,9 +33,9 @@ function iniciar()
      document.getElementById("usuario").addEventListener("click", ErrorUsuario);
      document.getElementById("usuario").addEventListener("blur", BorrarSpanUsuario);
      //addEventListener Clave1
-     document.getElementById("clave1").addEventListener("input", ValidarClave1);
-     document.getElementById("clave1").addEventListener("click", ErrorClave1);
-     document.getElementById("clave1").addEventListener("blur", BorrarSpanClave1);
+     document.getElementById("password").addEventListener("input", ValidarClave1);
+     document.getElementById("password").addEventListener("click", ErrorClave1);
+     document.getElementById("password").addEventListener("blur", BorrarSpanClave1);
      //addEventListener Calve2
      document.getElementById("clave2").addEventListener("input", ValidarClave2);
      document.getElementById("clave2").addEventListener("click", ErrorClave2);
