@@ -28,15 +28,12 @@ public class Usuario  {
     @Column(nullable=false, unique=true)
     private String email;
 
-    private String numeroDocumento;
-    
+      
     @OneToOne
     private Carrito unCarrito;
     //private boolean admin;
     @Column(nullable=false, unique=true)
     private String user;
-    
-    
     
     
 	public Usuario() {
@@ -45,7 +42,7 @@ public class Usuario  {
 	
 	
 	public Usuario(Integer id, String nombre, String apellido, Date fechaNacimiento, String direccion, String password,
-			String email, String user) {
+			String email, Carrito unCarrito, String user) {
 		
 		this.id = id;
 		this.nombre = nombre;
@@ -54,6 +51,7 @@ public class Usuario  {
 		this.direccion = direccion;
 		this.password = password;
 		this.email = email;
+		this.unCarrito = unCarrito;
 		this.user = user;
 	}
 	public Integer getId() {
@@ -98,15 +96,28 @@ public class Usuario  {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Carrito getUnCarrito() {
+		return unCarrito;
+	}
+	public void setUnCarrito(Carrito unCarrito) {
+		this.unCarrito = unCarrito;
+	}
 	public String getUser() {
 		return user;
 	}
 	public void setUser(String user) {
 		this.user = user;
 	}
- 
+    
+    
+    
+    
+    
+    
+  }
 
-}
+
+
     
     
     /* public String getDireccion() {
@@ -226,5 +237,3 @@ public class Usuario  {
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}*/
-}
-*/
