@@ -13,7 +13,7 @@ public class Producto {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-    private String codigoProducto;
+    private String nombre;
 	private Double precio;
     
 
@@ -24,13 +24,13 @@ public class Producto {
     }
 
 
-	public String getCodigoProducto() {
-		return codigoProducto;
+	public String getNombre() {
+		return nombre;
 	}
 
 
-	public void setCodigoProducto(String codigoProducto) {
-		this.codigoProducto = codigoProducto;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
     
