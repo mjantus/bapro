@@ -1,0 +1,43 @@
+
+
+#banner img {
+    display: none;
+}
+
+
+
+#banner h2 {
+
+    font-size: 25px;
+    color:#443F3E;
+} 
+
+
+
+#banner a:hover {
+    background: rgba(51,51,51,0.5);
+}
+
+@media (min-width:768px) {
+    #banner h2 {
+        font-size: 40px;
+    }
+
+    #banner img {
+        display: flex;
+        width: 100%;
+      
+    }
+}
+
+
+@media (min-width:1024px) {
+  
+    #banner img {
+        display: flex;
+        width: 100%;
+        height: 350px;
+    }
+
+
+}

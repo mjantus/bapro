@@ -1,0 +1,66 @@
+h3{
+    background-color: #443F3E;
+    opacity: 0.9;
+    color: #E5E2E1;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 10px;
+}
+.etiqueta label{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    background-color: #E5E2E1;
+
+}
+label{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    background-color: #E5E2E1;
+
+}
+a{
+    background-color: #E5E2E1;
+    color:#443F3E;
+
+}
+.etiqueta{
+width:150px;
+float:left;
+}
+
+.etiqueta2{
+    width:300px;
+    float:left;
+}
+
+.etiqueta3{
+width:400px;
+float:left;
+}
+
+.etiqueta4{
+width:500px;
+float:left;
+}
+
+div .form{
+margin-left: 25px;
+
+}
+
+@media only screen and (min-width: 768px){
+    h3{
+        font-size: 25px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    h3{
+        font-size: 40px;
+        padding: 10px;
+    }
+}

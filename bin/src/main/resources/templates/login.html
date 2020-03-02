@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
 
 <head>
     <title>Login a BetyMarket</title>
@@ -41,16 +41,14 @@
             </div>
         </section>
 
-		<p th:text="${mensaje != null} ? ${mensaje} : ''"></p>
-		
         <div class="contenedor">
-            <form method="POST" class="form-login" onsubmit="return validarLogin()" action="/index">
+            <form method="POST" class="form-login" onsubmit="return validarLogin()" action="loginSuccessful.php">
                 <div class="form-group">
                     <h3> LOGIN DE USUARIOS </h3>
                     <br>
                 <div class="form">  
                     <div class="etiqueta"><label>Email</label></div>
-                    <div class="etiqueta2"><input class="form-control" type="email" id="mail" name="email" placeholder="Email" required></div>
+                    <div class="etiqueta2"><input class="form-control" type="email" id="mail" placeholder="Email" required></div>
                     
                 </div>
                 </div>  
@@ -58,7 +56,7 @@
                 <br>
                 <div class="form">
                     <div class="etiqueta"><label>Contraseña</label></div>
-                    <div class="etiqueta2"><input class="form-control" type="password" id="clave" placeholder="Password" name="password" required></div>
+                    <div class="etiqueta2"><input class="form-control" type="password" id="clave" placeholder="Password"  required></div>
                     <br>
                     <br>
                     <span id="spanLogin" ></span>

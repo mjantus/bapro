@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>BetyMarket - Registro de Usuario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estylo.css">
+    <link rel="stylesheet" href="css/manu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/coleccion.css">
+    <link rel="stylesheet" href="css/estilopf.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/validar.js"> </script>
+
+</head>
+
+<body>
+<script>console.log("Esto es el registro")</script>
+    <header>
+        <div class="contenedor">
+            <h1>BetyMarket</h1>
+           
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index">Inicio</a>
+                <a href="preguntasfrecuentes">Preguntas Frecuentes</a>
+                <a href="login">Log in</a>
+                <a href="registro">Registro</a>
+                <a href="carrito">Carrito</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="imagenes/banner.jpg" alt="">
+            <div class="contenedor">
+                
+               
+            </div>
+
+        </section>
+
+        <section id="Registro de Usuario">
+            
+        </section>
+        <div class="contenedor">
+
+            <form method="POST" class="form-registro" onsubmit="return validarTodo()" action="/usuarios/add">
+                <div>
+                    <div class="etiqueta3">
+                        <label for="nombre">Nombre:</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre"  required> <span id="spanNombre"></span>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="apellido">Apellido:</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido"  required><span id="spanApellido"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="email" id="email" name="email" placeholder="Mail"  required><span id="spanEmail"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="direccion">Dirección</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="text" id="direccion" name="direccion" placeholder="Dirección" required><span id="spanDireccion"></span>
+                    </div>
+                </div>
+                <div class="etiqueta3">
+                    <label for="provincia">Provincia</label>
+                </div>
+                <div class="etiqueta4">
+                   <select name="" id="provincia">
+                    <option value="">Selecciona una provincia</option>
+
+                   </select>
+                    <span id="errorProvincia"></span>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="telefono">Teléfono</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="tel" id="telefono" name="telefono"  placeholder="Teléfono" required><span id="spanTelefono"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="date" id="fechaNacimiento" name="FechaNacimiento" placeholder="FechaNacimiento" required >
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3"><label for="user">Usuario:</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="text" id="user" name="user" placeholder="Usuario" required><span id="spanUsuario"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="clave1">Clave:</label></div>
+                    <div class="etiqueta4">
+                        <input type="password" id="clave1" name="password" placeholder="Clave"  required><span id="spanClave1"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="etiqueta3">
+                        <label for="clave2">Confirmar Clave:</label>
+                    </div>
+                    <div class="etiqueta4">
+                        <input type="password" id="clave2" name="clave2" placeholder="Confirmar Clave" required><span id="spanClave2"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="etiqueta3">
+                        <input type="submit" id="btnSubmit" name="submit"  value="Enviar" ></div>
+                    <div class="etiqueta4">&nbsp;</div>
+                </div>
+               
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="Copy" Betimar>BetyMarket &copy; 2019</p>
+            <div class="sociales">
+                <a href="www.facebook.com"><img src="imagenes/facebook.png" alt="facebook"></a>
+                <img src="imagenes/instagram.png" alt="instagram">
+                <img src="imagenes/twitter.png" alt="twitter">
+                <img src="imagenes/googleplus.png" alt="google+">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
