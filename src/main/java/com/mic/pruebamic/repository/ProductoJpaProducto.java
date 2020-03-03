@@ -9,8 +9,8 @@ import com.mic.pruebamic.model.Producto;
 public interface ProductoJpaProducto extends JpaRepository<Producto, Integer> {
 	
 	
-	public Producto findByName(String nombre);
+	public Producto findByNombre(String nombre);
 
-	}
+}
 
 
