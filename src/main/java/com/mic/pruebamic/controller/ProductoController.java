@@ -1,5 +1,9 @@
 package com.mic.pruebamic.controller;
 
-public class ProductoController {
+import org.springframework.stereotype.Controller;
 
+@Controller
+public class ProductoController {
+	
+	
 }
