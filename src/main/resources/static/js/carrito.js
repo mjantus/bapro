@@ -6,49 +6,49 @@
                     id: 1,
                     nombre: 'Sudaderas',
                     precio: 800,
-                    imagen:'imagenes/sudadera.jpg'
+                    imagen:'imagenes/sudadera.jpg',
                 },
                 {
                     id: 2,
                     nombre: 'Tops',
                     precio: 350,
-                    imagen: 'imagenes/croptopnegro.jpg'
+                    imagen: 'imagenes/croptopnegro.jpg',
                 },
                 {
                     id: 3,
                     nombre: 'Vestidos',
                     precio: 1100,
-                    imagen: 'imagenes/vestidogris.jpg'
+                    imagen: 'imagenes/vestidogris.jpg',
                 },
                 {
                     id: 4,
                     nombre: 'Conjuntos',
                     precio: 1500,
-                    imagen: 'imagenes/zaful-mujeres-conjunto-de-dos-piezas-sexy.jpg'
+                    imagen: 'imagenes/zaful-mujeres-conjunto-de-dos-piezas-sexy.jpg',
                 }
                 {
                     id: 5,
                     nombre: 'Faldas',
                     precio: 670,
-                    imagen: 'imagenes/polleras.jpg'
+                    imagen: 'imagenes/polleras.jpg',
                 },
                 {
                     id: 6,
                     nombre: 'Bottoms',
                     precio: 800,
-                    imagen: 'imagenes/bottoms.jpg'
+                    imagen: 'imagenes/bottoms.jpg',
                 },
                 {
                     id: 7,
                     nombre: 'Bikinis',
                     precio: 1250,
-                    imagen: 'imagenes/bikinis.jpg'
+                    imagen: 'imagenes/bikinis.jpg',
                 },
                 {
                     id: 8,
                     nombre: 'Hombres',
                     precio: 1200,
-                    imagen: 'imagenes/hombres.jpg'
+                    imagen: 'imagenes/hombres.jpg',
                 }
 
             ]
@@ -77,7 +77,7 @@
                     // Precio
                     let miNodoPrecio = document.createElement('p');
                     miNodoPrecio.classList.add('card-text');
-                    miNodoPrecio.textContent = info['precio'] + '€';
+                    miNodoPrecio.textContent = info['precio'] + '$';
                     // Boton 
                     let miNodoBoton = document.createElement('button');
                     miNodoBoton.classList.add('btn', 'btn-primary');
