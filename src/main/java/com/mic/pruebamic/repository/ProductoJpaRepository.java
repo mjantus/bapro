@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.mic.pruebamic.model.Producto;
 
 @Repository
-public interface ProductoJpaProducto extends JpaRepository<Producto, Integer> {
+public interface ProductoJpaRepository extends JpaRepository<Producto, Integer> {
 	
 	
 	public Producto findByNombre(String nombre);

@@ -1,52 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <title>Login a BetyMarket</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/estylo.css">
-    <link rel="stylesheet" href="css/manu.css">
-    <link rel="stylesheet" href="css/banner.css">
-    <link rel="stylesheet" href="css/coleccion.css">
-    <link rel="stylesheet" href="css/estilopf.css">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="./loginjs2.js"></script>
-</head>
-
-<body>
-
-<script>console.log("Esto es el carrito")</script>
- <header>
-        <div class="contenedor">
-            <h1>BetyMarket</h1>
-           
-            <label class="icon-menu" for="menu-bar"></label>
-            <nav class="menu">
-                <a href="index">Inicio</a>
-                <a href="preguntasFrecuentes">Preguntas Frecuentes</a>
-                <a href="login">Log in</a>
-                <a href="registro">Registro</a>
-                <a href="carrito">Carrito</a>
-            </nav>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estylo.css">
+    <link rel="stylesheet" href="/css/manu.css">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="stylesheet" href="/css/coleccion.css">
+    <link rel="stylesheet" href="/css/estilopf.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Stock de productos</title>
+  </head>
+  <body>
+    <main layout:fragment="contenido">
+    <div class="col-12">
+        <h2>Agregar producto</h2>
+        <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+             th:text="${mensaje}"
+             class="alert">
         </div>
-    </header>
-    <main>
-        <section id="banner">
-            <img src="imagenes/banner.jpg" alt="">
-            <div class="contenedor">
-                
-               
+        <form th:object="${producto}" th:action="@{/productos/agregar}" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre del producto</label>
+                <input autocomplete="off" autofocus th:field="*{nombre}" id="nombre"
+                       placeholder="Escribe el nombre del producto" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{nombre}"></div>
             </div>
+            
+            <div class="form-group">
+                <label for="existencia">Precio</label>
+                <input autocomplete="off" th:field="*{precio}" id="precio" placeholder="Precio del producto"
+                       type="number"
+                       class="form-control" th:classappend="${#fields.hasErrors('precio')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{precio}"></div>
 
-        </section>
-
-
-
-    </main>
-    
+            </div>
+            <button class="btn btn-success" type="submit">Guardar</button>
+            &nbsp;<a class="btn btn-warning" th:href="@{/productos/mostrar}">Ver todos</a>
+        </form>
+    </div>
+</main>
     
            <footer>
                 <div class="contenedor">
