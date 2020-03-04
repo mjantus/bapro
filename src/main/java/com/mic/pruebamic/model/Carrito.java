@@ -20,14 +20,12 @@ public class Carrito {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@OneToOne
-	@JoinColumn(name = "usuario_id")
+	 @OneToOne(mappedBy = "carrito")
 	private Usuario usuario;
 	
 	@ManyToMany()
 	@JoinTable(name = "carrito_productos")
 	private List<Producto> productos;
-	
 	
 	public Carrito() {
 		

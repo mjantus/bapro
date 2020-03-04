@@ -8,31 +8,57 @@ import javax.persistence.Id;
 @Entity
 public class Producto {
 
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-    private String nombre;
+
+	private String nombre;
 	private Double precio;
-    
+	private String urlImagen;
 
-    public Double getPrecio() {
-       
-        
-        return precio;
-    }
+	public Producto() {
+		super();
+	}
 
+	public Producto(Integer id, String nombre, Double precio, String urlImagen) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.urlImagen = urlImagen;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getUrlImagen() {
+		return urlImagen;
+	}
+
+	public void setUrlImagen(String urlImagen) {
+		this.urlImagen = urlImagen;
+	}
+
+	public void setPrecio(Double precio) {
+		this.precio = precio;
+	}
+
+	public Double getPrecio() {
+
+		return precio;
+	}
 
 	public String getNombre() {
 		return nombre;
 	}
 
-
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-    
 }
-

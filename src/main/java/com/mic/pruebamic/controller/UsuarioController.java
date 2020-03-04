@@ -11,54 +11,46 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
+import com.mic.pruebamic.model.Carrito;
 import com.mic.pruebamic.model.Usuario;
+import com.mic.pruebamic.repository.CarritoJpaRepository;
 import com.mic.pruebamic.repository.UsuarioJpaRepository;
-
 
 @Controller
 @RequestMapping("usuarios")
-	public class UsuarioController {
+public class UsuarioController {
 
 	@Autowired
 	private UsuarioJpaRepository usuarioJpaRepository;
-	
-	
+	@Autowired
+	private CarritoJpaRepository carritoJpaRepository;
+
 	@GetMapping("all")
-	public List<Usuario>getUsuarios(){
-		List<Usuario>usuarios = usuarioJpaRepository.findAll();
+	public List<Usuario> getUsuarios() {
+		List<Usuario> usuarios = usuarioJpaRepository.findAll();
 		return usuarios;
 	}
-	
-	@GetMapping({"id"})
-	public Usuario getUsuarioById(@PathVariable ("id") Integer id) {
-	Optional<Usuario>unOptionalUsuario = usuarioJpaRepository.findById(id);
-	return unOptionalUsuario.get();
+
+	@GetMapping({ "id" })
+	public Usuario getUsuarioById(@PathVariable("id") Integer id) {
+		Optional<Usuario> unOptionalUsuario = usuarioJpaRepository.findById(id);
+		return unOptionalUsuario.get();
 	}
-	
+
 	@PostMapping("add")
 	public String insertUsuario(Usuario unUsuarioARegistrar) {
-		Usuario unUsuarioRegistrado = usuarioJpaRepository.save(unUsuarioARegistrar);
+		Carrito unCarrito = new Carrito();
+		unUsuarioARegistrar.setCarrito(unCarrito);
+		usuarioJpaRepository.save(unUsuarioARegistrar);
+		carritoJpaRepository.save(unCarrito);
 
-				return"redirect:/index";
-		
-	
+		return "redirect:/index";
+
 	}
-	
+
 	@DeleteMapping("{id}")
-	public void deleteUsuario(@PathVariable ("id")Integer id ) {
+	public void deleteUsuario(@PathVariable("id") Integer id) {
 		usuarioJpaRepository.deleteById(id);
 	}
-	
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+}
