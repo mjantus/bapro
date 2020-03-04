@@ -38,7 +38,8 @@ public class LoginController {
 		if(passwordALoguear.equals(passwordLogueado)) {
 			return "redirect:index";
 		} else {
-			return "redirect:registro";
+			model.addAttribute("mensaje", "Usuario o contraseña incorrectos");
+			return "login";
 		}
 	}
 

@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>BetyMarket</title>
+    <title>Login a BetyMarket</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/estylo.css">
-    <link rel="stylesheet" href="/css/manu.css">
-    <link rel="stylesheet" href="/css/banner.css">
-    <link rel="stylesheet" href="/css/coleccion.css">
-    <link rel="stylesheet" href="/css/estilopf.css">
-    <link rel="stylesheet" href="/css/login.css">
-
+    <link rel="stylesheet" href="css/estylo.css">
+    <link rel="stylesheet" href="css/manu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/coleccion.css">
+    <link rel="stylesheet" href="css/estilopf.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="./loginjs2.js"></script>
 </head>
 
 <body>
-<script>console.log("Esto es el index")</script>
- <div class="contenedor">
-      <header>     
+<script>console.log("Esto es el login")</script>
+    <header>
+        <div class="contenedor">
             <h1>BetyMarket</h1>
-           
-            <nav class="menu">
-           
-               <a href="/index">Inicio</a>
-               <a href="/preguntasfrecuentes">Preguntas Frecuentes</a>
-               <a href="/login">Log in</a>
-               <a href="/registro">Registro</a>
-               <a href="/carrito">Carrito</a>
             
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index">Inicio</a>
+                <a href="preguntasfrecuentes">Preguntas Frecuentes</a>
+                <a href="login">Log in</a>
+                <a href="registro">Registro</a>
+                <a href="carrito">Carrito</a>
             </nav>
-    
+        </div>
     </header>
 
     <main>
+            
         <section id="banner">
             <img src="imagenes/banner.jpg" alt="">
           
@@ -52,34 +53,42 @@
                 <article class="producto">
                     <img src="imagenes/sudadera.jpg" alt="Sudaderas">
                     <span>Sudaderas</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/croptopnegro.jpg" alt="Tops">
                     <span>Tops</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/vestidogris.jpg" alt="Vestidos">
                     <span>Vestidos</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/zaful-mujeres-conjunto-de-dos-piezas-sexy.jpg" alt="Conjuntos">
                     <span>Conjuntos</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/polleras.jpg" alt="Faldas">
                     <span>Faldas</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/bottoms.jpg" alt="Bottoms">
                     <span>Bottoms</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/bikinis.jpg" alt="Bikinis">
                     <span>Bikinis</span>
+                    <button>Comprar</button>
                 </article>
                 <article class="producto">
                     <img src="imagenes/hombres.jpg" alt="Hombres">
                     <span>Hombres</span>
+                    <button>Comprar</button>
                 </article>
             </div>
 
