@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/estilopf.css">
     <link rel="stylesheet" href="css/login.css">
     <script src="./loginjs2.js"></script>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -42,51 +43,70 @@
         </section>
 
 		<p th:text="${mensaje != null} ? ${mensaje} : ''"></p>
-		
-        <div class="contenedor">
-            <form method="POST" class="form-login" onsubmit="return validarLogin()" action="/index">
-                <div class="form-group">
-                    <h3> LOGIN DE USUARIOS </h3>
-                    <br>
-                <div class="form">  
-                    <div class="etiqueta"><label>Email</label></div>
-                    <div class="etiqueta2"><input class="form-control" type="email" id="mail" name="email" placeholder="Email" required></div>
-                    
-                </div>
-                </div>  
-                
-                <br>
-                <div class="form">
-                    <div class="etiqueta"><label>Contraseña</label></div>
-                    <div class="etiqueta2"><input class="form-control" type="password" id="clave" placeholder="Password" name="password" required></div>
-                    <br>
-                    <br>
-                    <span id="spanLogin" ></span>
-                </div>
 
-                <br>
-                <div class="form">
-                    <div class="etiqueta">&nbsp;</div>
-                    <div class="etiqueta2">
-                        <button type="submit" id="btnIngresar" name="submit">Ingresar</button>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="/registro"><input type="button" value="Registrarse"></a>
-                        
-                        
-                        </div>
-                        
-                    </div>
-                    <br>
-                </div>
-                
-                <div class="form">
+		<div class="contenedor">
+			<form method="POST" class="form-login"
+				onsubmit="return validarLogin()" action="/index">
+				<div class="form-group">
+					<h3>LOGIN DE USUARIOS</h3>
+					<br>
+					<div class="form">
+						<div class="etiqueta">
+							<label>Email</label>
+						</div>
+						<div class="etiqueta2">
+							<input class="form-control" type="email" id="mail" name="email"
+								placeholder="Email" required>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<div class="form">
+					<div class="etiqueta">
+						<label>Contraseña</label>
+					</div>
+					<div class="etiqueta2">
+						<input class="form-control" type="password" id="clave"
+							placeholder="Password" name="password" required>
+					</div>
+					<br> <br> <span id="spanLogin"></span>
+				</div>
+
+				<br>
+				<div class="form">
+
+
+
+					<div class="etiqueta2">
+						<form action="?" method="POST">
+							<div class="g-recaptcha"
+								data-sitekey="6Lfk294UAAAAAHXGBMD6TTI6pnizgDysrReSKJFL"></div>
+							<br />
+							<button type="submit" id="btnIngresar" name="submit">Ingresar</button>
+
+						</form>
+
+
+						<br> <br> <br> <a href="/registro"><input
+							type="button" value="Registrarse"></a>
+
+
+					</div>
+
+				</div>
+				<br>
+		</div>
+
+		<div class="form">
                     
                     <br>
                     <input id="persistent" name="persistent" value="y" type="checkbox" tabindex="3" checked />
-                    <label for="persistent">"Recordarme"</label>
+                    <label for="persistent">" Recordarme "</label>
                     <br>
+                </div>
+                <div class="form">
                     <br>
                     <a href="#" id="">¿Olvidó su Contraseña?</a>
                 </div>
