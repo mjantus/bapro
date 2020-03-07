@@ -23,6 +23,10 @@ public class Carrito {
 	 @OneToOne(mappedBy = "carrito")
 	private Usuario usuario;
 	
+	 /* arreglar esta relacion entre usuario y carrito que son uno a uno.*/
+	 
+	 
+	 
 	@ManyToMany()
 	@JoinTable(name = "carrito_productos")
 	private List<Producto> productos;
