@@ -21,6 +21,36 @@ public class Usuario {
 	@Column(nullable = false)
 	private String nombre;
 	private String apellido;
+	private String provincia;
+	private Double telefono;
+
+
+
+	public Usuario(String provincia, Double telefono) {
+		super();
+		this.provincia = provincia;
+		this.telefono = telefono;
+	}
+
+	
+	
+	public String getProvincia() {
+		return provincia;
+	}
+
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+
+	public Double getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(Double telefono) {
+		this.telefono = telefono;
+	}
+
+	
 
 	private Date fechaNacimiento;
 	private String direccion;

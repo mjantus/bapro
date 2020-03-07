@@ -13,9 +13,7 @@
 <link rel="stylesheet" href="/css/coleccion.css">
 <link rel="stylesheet" href="/css/estilopf.css">
 <link rel="stylesheet" href="/css/login.css">
-<script src="/js/validar.js">
-	
-</script>
+<script defer src="/js/validar.js"></script>
 
 </head>
 
@@ -52,8 +50,8 @@
 						<label for="nombre">Nombre:</label>
 					</div>
 					<div class="etiqueta4">
-						<input type="text" id="nombre" name="nombre" placeholder="Nombre"
-							required> <span id="spanNombre"></span>
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre" 
+						required> <span id="spanNombre"></span>
 
 					</div>
 				</div>
@@ -64,7 +62,7 @@
 					</div>
 					<div class="etiqueta4">
 						<input type="text" id="apellido" name="apellido"
-							placeholder="Apellido" required><span id="spanApellido"></span>
+							placeholder="Apellido" required><span id="spanApellido"</span>
 					</div>
 				</div>
 
@@ -91,10 +89,10 @@
 					<label for="provincia">Provincia</label>
 				</div>
 				<div class="etiqueta4">
-					<select name="" id="provincia">
-						<option value="">Selecciona una provincia</option>
-
-					</select> <span id="errorProvincia"></span>
+					<select name="provincia" id="provincia" style="padding:5px">
+						<option value="">Seleccione una opción</option>
+					</select>
+					<span id="errorProvincia"></span>
 				</div>
 
 				<div>
@@ -103,7 +101,7 @@
 					</div>
 					<div class="etiqueta4">
 						<input type="tel" id="telefono" name="telefono"
-							placeholder="Teléfono" required><span id="spanTelefono"></span>
+							placeholder="Telefono" required><span id="spanTelefono"></span>
 					</div>
 				</div>
 
@@ -119,20 +117,20 @@
 
 				<div>
 					<div class="etiqueta3">
-						<label for="user">Usuario:</label>
+						<label for="usuario">Usuario:</label>
 					</div>
 					<div class="etiqueta4">
-						<input type="text" id="user" name="user" placeholder="Usuario"
+						<input type="text" id="usuario" name="user" placeholder="Usuario"
 							required><span id="spanUsuario"></span>
 					</div>
 				</div>
 
 				<div>
 					<div class="etiqueta3">
-						<label for="clave1">Clave:</label>
+						<label for="password">Clave:</label>
 					</div>
 					<div class="etiqueta4">
-						<input type="password" id="clave1" name="password"
+						<input type="password" id="password" name="password"
 							placeholder="Clave" required><span id="spanClave1"></span>
 					</div>
 				</div>

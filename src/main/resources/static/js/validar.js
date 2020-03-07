@@ -179,7 +179,7 @@ function BorrarSpanDireccion()
 }
 function ErrorProvincia()
 {  
-    if (document.getElementById("provincia").value = "")
+    if (document.getElementById("provincia").value == "")
     {
        document.getElementById("ErrorProvincia").innerHTML = "La provincia es obligatoria";
        document.getElementById("provincia").style.color = "red";
@@ -333,26 +333,19 @@ function validarTodo()
    }
     
 }
+
 fetch("https://apis.datos.gob.ar/georef/api/provincias")
 .then(function(rta){
-return rta.json();
-
+	return rta.json();
 })
-
-
 .then(function(datos){
-var opcionesDeProvincias = document.querySelector("#provincia");
+	var opcionesDeProvincias = document.querySelector("#provincia");
 
-for(var i = 1; i < datos.provincia.length;i++){
-    //console.log(datos.provincia[i].nombre);
-    opcionesDeProvincias.innerHTML += "<option>+datos.provincia[i].nombre</option>";
-}
-
+	for(var i = 0; i < datos.provincias.length; i++){
+	    //console.log(datos.provincia[i].nombre);
+	    opcionesDeProvincias.innerHTML += '<option value="'+ datos.provincias[i].nombre +'">' + datos.provincias[i].nombre + "</option>";
+	}
 })
-
-.catch(function(error){
-
-
-})
+.catch(function(error){})
 
 
