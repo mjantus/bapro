@@ -1,6 +1,8 @@
 package com.mic.pruebamic.model;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,67 +24,45 @@ public class Usuario {
 
 	@Column(nullable = false)
 	private String nombre;
+
 	private String apellido;
+
 	private String provincia;
+
 	private Double telefono;
 
-
-
-	public Usuario(String provincia, Double telefono) {
-		super();
-		this.provincia = provincia;
-		this.telefono = telefono;
-	}
-
-	
-	
-	public String getProvincia() {
-		return provincia;
-	}
-
-	public void setProvincia(String provincia) {
-		this.provincia = provincia;
-	}
-
-	public Double getTelefono() {
-		return telefono;
-	}
-
-	public void setTelefono(Double telefono) {
-		this.telefono = telefono;
-	}
-
-	
+	@OneToOne(mappedBy = "usuario")
+	private Carrito carrito;
 
 	private Date fechaNacimiento;
+
 	private String direccion;
 
 	@Column(nullable = false)
 	private String password;
+
 	@Column(nullable = false, unique = true)
 	private String email;
 
-	@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "carrito_id", referencedColumnName = "id")
-	private Carrito carrito;
-	// private boolean admin;
 	@Column(nullable = false, unique = true)
 	private String user;
 
 	public Usuario() {
 	}
 
-	public Usuario(Integer id, String nombre, String apellido, Date fechaNacimiento, String direccion, String password,
-			String email, Carrito carrito, String user) {
-
+	public Usuario(Integer id, String nombre, String apellido, String provincia, Double telefono, Carrito carrito,
+			Date fechaNacimiento, String direccion, String password, String email, String user) {
+		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		this.provincia = provincia;
+		this.telefono = telefono;
+		this.carrito = carrito;
 		this.fechaNacimiento = fechaNacimiento;
 		this.direccion = direccion;
 		this.password = password;
 		this.email = email;
-		this.carrito = carrito;
 		this.user = user;
 	}
 
@@ -106,6 +88,30 @@ public class Usuario {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
+	}
+
+	public String getProvincia() {
+		return provincia;
+	}
+
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+
+	public Double getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(Double telefono) {
+		this.telefono = telefono;
+	}
+
+	public Carrito getCarrito() {
+		return carrito;
+	}
+
+	public void setCarrito(Carrito carrito) {
+		this.carrito = carrito;
 	}
 
 	public Date getFechaNacimiento() {
@@ -140,14 +146,6 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Carrito getCarrito() {
-		return carrito;
-	}
-
-	public void setCarrito(Carrito carrito) {
-		this.carrito = carrito;
-	}
-
 	public String getUser() {
 		return user;
 	}
@@ -157,5 +155,3 @@ public class Usuario {
 	}
 
 }
-
-

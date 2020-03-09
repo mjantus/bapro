@@ -2,6 +2,7 @@ package com.mic.pruebamic.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,15 +21,19 @@ public class Carrito {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	 @OneToOne(mappedBy = "carrito")
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
 	private Usuario usuario;
+	
 	
 	 /* arreglar esta relacion entre usuario y carrito que son uno a uno.*/
 	 
-	 
-	 
 	@ManyToMany()
-	@JoinTable(name = "carrito_productos")
+	@JoinTable(
+			name = "carrito_producto",
+			joinColumns = @JoinColumn(name = "carrito_id"), 
+			inverseJoinColumns = @JoinColumn(name = "producto_id")
+			)
 	private List<Producto> productos;
 	
 	public Carrito() {

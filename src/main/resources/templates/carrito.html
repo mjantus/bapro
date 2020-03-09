@@ -23,7 +23,9 @@
              th:text="${mensaje}"
              class="alert">
         </div>
-        <form th:object="${producto}" th:action="@{/productos/agregar}" method="post">
+        
+        <h3 th:text="'Se agrego el producto: '+${productoAgregado.nombre}"></h3>
+        <!-- <form th:object="${producto}" th:action="@{/productos/agregar}" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre del producto</label>
                 <input autocomplete="off" autofocus th:field="*{nombre}" id="nombre"
@@ -42,7 +44,7 @@
             </div>
             <button class="btn btn-success" type="submit">Guardar</button>
             &nbsp;<a class="btn btn-warning" th:href="@{/productos/mostrar}">Ver todos</a>
-        </form>
+        </form> -->
     </div>
 </main>
     

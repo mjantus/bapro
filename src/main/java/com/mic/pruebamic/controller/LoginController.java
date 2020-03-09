@@ -1,7 +1,6 @@
 package com.mic.pruebamic.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,7 +26,7 @@ public class LoginController {
 		
 		//Compruebo que se haya encontrado al Usuario en DB
 		if(unUsuarioLogueado == null) {
-			model.addAttribute("mensaje", "No se encontró usuario con ese mail");
+			model.addAttribute("mensaje", "No se encontrÃ³ usuario con ese mail");
 			return "login";
 		} 			
 			
@@ -38,7 +37,7 @@ public class LoginController {
 		if(passwordALoguear.equals(passwordLogueado)) {
 			return "redirect:index";
 		} else {
-			model.addAttribute("mensaje", "Usuario o contraseña incorrectos");
+			model.addAttribute("mensaje", "Usuario o contraseÃ±a incorrectos");
 			return "login";
 		}
 	}
