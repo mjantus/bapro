@@ -70,6 +70,7 @@
 						<td th:text="${producto.precio}"></td>
 						<td>
 							<form th:action="@{'/carrito/' + ${producto.id}}" method="POST">
+								<input type="hidden" th:value="${idUsuario}"  name="idUsuario">
 								<button type="submit">Agregar al Carrito</button>
 							</form>
 						</td>

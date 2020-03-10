@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mic.pruebamic.model.Carrito;
 import com.mic.pruebamic.model.Producto;
+import com.mic.pruebamic.model.Usuario;
 import com.mic.pruebamic.repository.CarritoJpaRepository;
 import com.mic.pruebamic.repository.ProductoJpaRepository;
+import com.mic.pruebamic.repository.UsuarioJpaRepository;
 
 @Controller
 @RequestMapping("carrito")
@@ -26,10 +28,13 @@ public class CarritoController {
 
 	@Autowired
 	private ProductoJpaRepository productoJpaRepository;
+	
+	@Autowired
+	private UsuarioJpaRepository usuarioJpaRepository;
 
 	@GetMapping("")
 	public String carrito() {
-//		carritoJpaRepository.
+		
 		return "carrito";
 
 	}
@@ -41,7 +46,7 @@ public class CarritoController {
 
 	}
 
-	@GetMapping({ "id" })
+	@GetMapping("{id}")
 	public Carrito getUsuarioById(@PathVariable("id") Integer id) {
 		Optional<Carrito> unOptionalCarrito = carritoJpaRepository.findById(id);
 		return unOptionalCarrito.get();
@@ -49,11 +54,11 @@ public class CarritoController {
 	}
 
 	@PostMapping("{id}")
-	public String insertProducto(@PathVariable("id") Integer id,Model model) {
+	public String insertProducto(@PathVariable("id") Integer id,Model model,Integer idUsuario) {
 		Optional<Producto> unOptionalProducto = productoJpaRepository.findById(id);
 		model.addAttribute("productoAgregado", unOptionalProducto.get());
 //		Optional<Carrito> unOptionalCarrito = carritoJpaRepository.findById(id);
-		
+		Usuario unUsuario = usuarioJpaRepository.findById(idUsuario).get();
 		return "carrito";
 
 	}

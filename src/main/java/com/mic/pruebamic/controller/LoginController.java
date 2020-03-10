@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mic.pruebamic.model.Usuario;
 import com.mic.pruebamic.repository.UsuarioJpaRepository;
+
+import aj.org.objectweb.asm.Attribute;
 
 @Controller
 public class LoginController {
@@ -15,7 +18,7 @@ public class LoginController {
 	private UsuarioJpaRepository usuarioJpaRepository;
 
 	@PostMapping("index")
-	public String loginUsuario(Usuario unUsuarioALoguear,Model model) {
+	public String loginUsuario(Usuario unUsuarioALoguear,Model model,RedirectAttributes redirectAttributes) {
 
 		//Estos datos vienen del <form>
 		String emailALoguear = unUsuarioALoguear.getEmail();
@@ -35,11 +38,15 @@ public class LoginController {
 		
 		//Comparo la clave ingresada por <form> con la obtenida de DB
 		if(passwordALoguear.equals(passwordLogueado)) {
+			redirectAttributes.addAttribute("idUsuario", unUsuarioLogueado.getId());
 			return "redirect:index";
 		} else {
 			model.addAttribute("mensaje", "Usuario o contraseÃ±a incorrectos");
 			return "login";
 		}
+	
+	
+	
 	}
 
 }

@@ -1,8 +1,7 @@
 package com.mic.pruebamic.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -66,6 +65,16 @@ public class Producto {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public String getConcepto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getImporte() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

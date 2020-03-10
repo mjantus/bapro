@@ -22,6 +22,7 @@ public class UsuarioController {
 
 	@Autowired
 	private UsuarioJpaRepository usuarioJpaRepository;
+	
 	@Autowired
 	private CarritoJpaRepository carritoJpaRepository;
 
