@@ -43,6 +43,12 @@ public class HomeController {
 	
 	}
 	
+	
+	@GetMapping("preguntasfrecuentes")
+	public String preguntasFrecuentes() {
+		return "preguntasfrecuentes";
+	
 	}
+}
 	
 

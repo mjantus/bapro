@@ -23,6 +23,8 @@ import com.mic.pruebamic.repository.UsuarioJpaRepository;
 @RequestMapping("carrito")
 public class CarritoController {
 
+	private static final Carrito New = null;
+
 	@Autowired
 	private CarritoJpaRepository carritoJpaRepository;
 
@@ -66,13 +68,17 @@ public class CarritoController {
 	@PostMapping("add")
 	public Carrito insertCarrito(Carrito unProductoASeleccionar) {
 		Carrito unProductoSeleccionado = carritoJpaRepository.save(unProductoASeleccionar);
+		
 		return unProductoSeleccionado;
 
 	}
 
+	
+	
 	@DeleteMapping("{id}")
 	public void deleteCarrito(@PathVariable("id") Integer id) {
 		carritoJpaRepository.deleteById(id);
 	}
 
+	
 }
