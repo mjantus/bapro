@@ -4,19 +4,25 @@
       
             h2{
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 58px !important;
+                font-weight: bold !important;
                 text-align: center;
                 background-color:#A9A7A6;
                 color:  #E5E2E1;
                 text-decoration: wavy;
-                margin-left: 12px;
+                margin-left: 0px;
                 opacity: 0.9;
-                margin-right: 12px;
+                margin-right: 0px;
                 padding: 5px;
             }
             #pf {
                 background-color: #E5E2E1;
+            }
+            
+            td {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 40px !important;
+                font-weight: bold !important;
             }
 
             p {

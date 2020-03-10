@@ -1,11 +1,12 @@
 h1{
-    color:#443F3E;
-    font-size: 46px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding: 10px;
+	 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    color:#443F3E !important;
+    font-size: 73px !important;
+    font-weight: bold !important;
+    margin-top: -5px !important;
+    margin-left: 10px !important;
+    margin-right: 25px !important;
+    padding: 10px !important;;
   
 
     
@@ -25,12 +26,12 @@ header {
 header nav a{
     display: inline-block;
     color:#443F3E;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 25px;
-    padding: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-size: 30px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    margin-left: 25px !important;
+    padding: 2px !important;
     width: 100%;
 
 
